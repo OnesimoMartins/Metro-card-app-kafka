@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/XEPDB1
+    username: METRO_APP
+    password: 9251
+
+    hikari:
+      maximum-pool-size: 20
