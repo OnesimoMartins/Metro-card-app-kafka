@@ -6,3 +6,14 @@ spring:
 
     hikari:
       maximum-pool-size: 20
+
+  liquibase:
+    database-change-log-table: schema-history
+    change-log: classpath:/db/changelog-master.xml
+    enabled: true
+
+  jpa:
+    show-sql: true
+
+
+
