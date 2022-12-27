@@ -8,7 +8,7 @@ spring:
       maximum-pool-size: 20
 
   liquibase:
-    database-change-log-table: schema_history
+#    database-change-log-table: schema_history
     change-log: classpath:/db/changelog-master.xml
     enabled: true
 

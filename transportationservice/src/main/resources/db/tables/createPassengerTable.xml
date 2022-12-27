@@ -6,6 +6,9 @@
     <changeSet id="createPassengerTable" author="Onésimo Martins">
 
         <preConditions>
+            <not>
+                <tableExists tableName="passenger"/>
+            </not>
                 <tableExists tableName="card" />
         </preConditions>
 
