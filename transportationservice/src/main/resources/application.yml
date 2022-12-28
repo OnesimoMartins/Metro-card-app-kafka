@@ -12,8 +12,25 @@ spring:
     change-log: classpath:/db/changelog-master.xml
     enabled: true
 
+
   jpa:
     show-sql: true
+
+  kafka:
+    bootstrap-servers:
+      - localhost:29092
+
+  freemarker:
+    charset: UTF-8
+    template-loader-path:
+      - classpath:/templates
+    suffix: html
+    settings:
+      locale: pt_BR
+
+
+
+
 
 
 
