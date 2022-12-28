@@ -13,10 +13,12 @@ data class PassengerOut(
     companion object
 }
 
-fun PassengerOut.Companion.fromPassenger(passenger: Passenger)=PassengerOut(
-    id=passenger.id!!,
-    name=passenger.name,
-    lastName=passenger.lastName,
-    passengerType = passenger.passengerType,
-    card = CardOut.fromCard(passenger.card!!),
-)
+fun PassengerOut.Companion.fromPassenger(passenger:()->Passenger)=passenger.invoke().let{
+    PassengerOut(
+    id=it.id!!,
+    name=it.name,
+    lastName=it.lastName,
+    passengerType = it.passengerType,
+    card = CardOut.fromCard(it.card)
+    )
+}
